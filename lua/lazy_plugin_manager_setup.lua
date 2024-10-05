@@ -25,7 +25,8 @@ vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
   -- [[ THEMES ]]
-  require 'plugins.tokyonight',
+  -- require 'plugins.themes.tokyonight',
+  require 'plugins.themes.kanagawa',
 
   -- [[ LANGUAGE SERVER SETUP ]]
   require 'plugins.lsp-config', -- Configures language servers
