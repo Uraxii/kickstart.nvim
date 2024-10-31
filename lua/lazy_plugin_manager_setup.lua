@@ -32,7 +32,7 @@ require('lazy').setup({
   require 'plugins.lsp-config', -- Configures language servers
   require 'plugins.lazydev', -- Configures Lua language servers
   require 'plugins.conform', -- Text Autoformatter
-  require 'plugins.nvim-cmp', -- Text completion engine
+  --require 'plugins.nvim-cmp', -- Text completion engine
   require 'plugins.lint', -- Linter to check code for errors
   require 'plugins.debug', -- Enables debugging feature when runnning code
 

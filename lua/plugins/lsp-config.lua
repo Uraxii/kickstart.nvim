@@ -156,7 +156,6 @@ return {
       -- gopls = {},
       pyright = {},
       omnisharp = {},
-      gdtoolkit = {},
       -- rust_analyzer = {},
       -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
       --
@@ -211,5 +210,17 @@ return {
         end,
       },
     }
+
+    -- gdscript is not available on Mason, so it must be configured manually.
+    -- The gdscript lsp is available through the Godot application, and runs with Godot.
+    local gdscript = {
+      capabilities = capabilities,
+      cmd = vim.lsp.rpc.connect('127.0.0.1', '6005'),
+    }
+    if vim.fn.has 'win32' == 1 then
+      -- Windows stuff...
+      gdscript['cmd'] = { 'netcat', 'localhost', os.getenv 'GDScript_Port' or '6005' }
+    end
+    require('lspconfig').gdscript.setup(gdscript)
   end,
 }
