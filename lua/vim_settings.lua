@@ -12,6 +12,12 @@ vim.g.have_nerd_font = true
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
 
+-- ignore meta files when returning autocomple results
+vim.opt.wildignore = '*.meta'
+
+-- Searches ALL subdirectories of current directory when looking for files.
+vim.opt.path:append { '**' }
+
 -- Make line numbers default
 vim.opt.number = true
 -- Line numbers are relative to the position of the current line. Current line still displays the actual line number.
