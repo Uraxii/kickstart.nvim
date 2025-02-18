@@ -38,7 +38,8 @@ require('lazy').setup({
 
   -- [[ NAVIGATION ]]
   require 'plugins.telescope', -- Fuzzy file seachering
-  require 'plugins.neo-tree', -- File tree browser
+  require 'plugins.telescope-file-browser',
+  --require 'plugins.neo-tree', -- File tree browser
   --require 'plugins.yazi', -- File tree browser (alternative)
 
   -- [[ TEXT EDITING AND PARSING ]

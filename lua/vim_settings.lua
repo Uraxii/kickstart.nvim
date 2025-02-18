@@ -12,6 +12,11 @@ vim.g.have_nerd_font = true
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
 
+vim.opt.expandtab = true -- Pressing the TAB key will insert spaces instead of a TAB character
+vim.opt.tabstop = 8      -- A TAB character looks like 4 spaces
+vim.opt.softtabstop = 8  -- Number of spaces inserted instead of a TAB character
+vim.opt.shiftwidth = 8   -- Number of spaces inserted when indenting
+
 -- ignore meta files when returning autocomple results
 vim.opt.wildignore = '*.meta'
 

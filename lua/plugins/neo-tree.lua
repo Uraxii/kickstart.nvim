@@ -16,7 +16,7 @@ return {
   cmd = 'Neotree',
 
   keys = {
-    { '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
+    { '<leader>f', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
   },
 
   opts = {
@@ -31,7 +31,7 @@ return {
           boder = 'none',
         },
         mappings = {
-          ['\\'] = 'close_window',
+          ['<leader>f'] = 'close_window',
           ['P'] = {
             'toggle_preview',
             config = {
