@@ -215,7 +215,7 @@ return {
     -- The gdscript lsp is available through the Godot application, and runs with Godot.
     local gdscript = {
       capabilities = capabilities,
-      cmd = vim.lsp.rpc.connect('127.0.0.1', '6005'),
+      cmd = vim.lsp.rpc.connect('127.0.0.1', 6005),
     }
     if vim.fn.has 'win32' == 1 then
       -- Windows stuff...
