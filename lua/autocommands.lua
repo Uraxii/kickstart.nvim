@@ -11,3 +11,5 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.highlight.on_yank()
   end,
 })
+
+vim.cmd [[highlight ColorColumn ctermbg=lightgrey guibg=lightgrey]]

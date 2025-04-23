@@ -13,7 +13,7 @@ return { -- You can easily change to a different colorscheme.
   functionStyle = {},
   keywordStyle = { italic = true },
   statementStyle = { bold = true },
-  typeStyle = { bole = true },
+  typeStyle = {},
   transparent = true, -- do not set background color
   dimInactive = false, -- dim inactive window `:h hl-NormalNC`
   terminalColors = true, -- define vim.g.terminal_color_{0,17}
@@ -27,17 +27,17 @@ return { -- You can easily change to a different colorscheme.
     return {}
   end,
 
-  theme = 'dragon', -- Load "wave" theme when 'background' option is not set
+  theme = 'wave', -- Load "wave" theme when 'background' option is not set
 
-  background = { -- map the value of 'background' option to a theme
-    dark = 'wave', -- try "dragon" !
-    light = 'lotus',
-  },
+  -- background = { -- map the value of 'background' option to a theme
+  -- dark = 'wave', -- try "dragon" !
+  -- light = 'lotus',
+  -- },
 
-  -- Enable to use terminal transparency
+  -- Enable to make more transparent.
   opts = function()
     return {
-      transparent = true,
+      transparent = false,
     }
   end,
 
@@ -47,7 +47,7 @@ return { -- You can easily change to a different colorscheme.
     -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
 
     -- vim.cmd.colorscheme 'kanagawa-dragon'
-    vim.cmd.colorscheme 'kanagawa-dragon'
+    vim.cmd.colorscheme 'kanagawa-wave'
 
     -- You can configure highlights by doing something like:
     vim.cmd.hi 'Comment gui=none'
