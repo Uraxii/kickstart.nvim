@@ -56,7 +56,8 @@ vim.opt.smartcase = true
 vim.opt.signcolumn = 'yes'
 
 -- Hightlight column to warn of long line
-vim.opt.colorcolumn = '100'
+vim.opt.colorcolumn = '80'
+vim.cmd [[highlight ColorColumn ctermbg=lightgrey guibg=lightgrey]]
 
 -- Decrease update time
 vim.opt.updatetime = 250

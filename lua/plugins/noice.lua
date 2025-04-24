@@ -6,56 +6,27 @@ return {
       format = {
         cmdline = {
           title = 'Command',
-          icon = '> ',
+          icon = '>_',
         },
-        search_down = { icon = '🔍 ' },
-        search_up = { icon = '🔎 ' },
-        filter = { icon = '$ ' },
       },
     },
-    views = {
-      popup = {
-        border = {
-          style = 'single',
-          highlight = 'Normal',
+    presets = {
+      -- you can enable a preset by setting it to true, or a table that will override the preset config
+      -- you can also add custom presets that you can enable/disable with enabled=true
+      bottom_search = false, -- use a classic bottom cmdline for search
+      command_palette = true, -- position the cmdline and popupmenu together
+      long_message_to_split = true, -- long messages will be sent to a split
+      inc_rename = false, -- enables an input dialog for inc-rename.nvim
+    },
+    routes = {
+      {
+        view = 'notify',
+        filter = {
+          event = 'msg_showmode',
+          find = 'recording @',
         },
-      },
-      cmdline_popup = {
-        border = {
-          style = 'single', -- border is visible
-          highlight = 'Normal', -- use 'Normal' or your preferred highlight group
-        },
-        position = {
-          row = 5,
-          col = '50%',
-        },
-        size = {
-          width = 60,
-          height = 'auto',
-        },
-        win_options = {
-          winhighlight = {
-            Normal = 'NoiceCmdlinePopupTransparent',
-            FloatBorder = 'Normal', -- border uses 'Normal' highlight
-          },
-        },
-      },
-      popupmenu = {
-        border = {
-          style = 'single',
-          highlight = 'Normal',
-        },
-      },
-      split = {
-        border = {
-          style = 'single',
-          highlight = 'Normal',
-        },
-      },
-      mini = {
-        border = {
-          style = 'single',
-          highlight = 'Normal',
+        opts = {
+          skip = true,
         },
       },
     },
@@ -64,10 +35,4 @@ return {
     'MunifTanjim/nui.nvim',
     'rcarriga/nvim-notify',
   },
-
-  config = function(_, opts)
-    require('noice').setup(opts)
-    -- Keep this line only if you want the border transparent too:
-    -- vim.api.nvim_set_hl(0, 'NoiceCmdlinePopupBorder',  transparent)
-  end,
 }

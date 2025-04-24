@@ -28,6 +28,10 @@ require('lazy').setup({
   -- require 'plugins.themes.tokyonight',
   require 'plugins.themes.kanagawa',
 
+  -- [[ NOTIFICATIONS ]]
+  require 'plugins.notify',
+  require 'plugins.noice', -- Highly experimental plugin that completely replaces the UI for messages, cmdline and the popupmenu.
+
   -- [[ LANGUAGE SERVER SETUP ]]
   require 'plugins.lsp-config', -- Configures language servers
   require 'plugins.lazydev', -- Configures Lua language servers
@@ -47,7 +51,6 @@ require('lazy').setup({
   require 'plugins.vim-slueth', -- Detect tabstop and shiftwidth automatically
   require 'plugins.which-key', -- Proives key options popup
   require 'plugins.mini', -- Extends text-object capabilities; users can define custome text-objects
-  require 'plugins.noice', -- Highly experimental plugin that completely replaces the UI for messages, cmdline and the popupmenu.
   require 'plugins.nvim-treesitter', -- Text parser (created syntax tree for files)
   require 'plugins.indent_line', -- Adds indention guides
   require 'plugins.autopairs', -- Creates closing characters when typing wrapped data (i.e. ", (, {, etc.)
