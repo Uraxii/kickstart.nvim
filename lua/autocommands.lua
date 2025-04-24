@@ -15,6 +15,15 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 -- [[ NOTIFICATIONS ]]
 
+-- Displays a message when saving a file
+vim.api.nvim_create_autocmd('BufWritePost', {
+  pattern = '*',
+  callback = function(args)
+    local filepath = vim.api.nvim_buf_get_name(args.buf)
+    vim.notify('Saved: ' .. filepath, vim.log.levels.INFO, { title = 'Neovim' })
+  end,
+})
+
 local delete_notify_id = nil
 local delete_notify_timer = nil
 local deleted_buffer = ''
